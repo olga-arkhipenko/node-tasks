@@ -1,0 +1,24 @@
+{
+  "name": "dad-jokes-cli",
+  "version": "1.0.0",
+  "description": "Simple Dad Jokes API CLI",
+  "main": "index.js",
+  "bin": {
+    "dad-jokes-cli": "./cli.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Simple",
+    "Dad",
+    "Jokes",
+    "API",
+    "CLI"
+  ],
+  "author": "Olga Arkhipenko",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.10.0"
+  }
+}
