@@ -4,7 +4,7 @@
   "description": "Simple Dad Jokes API CLI",
   "main": "index.js",
   "bin": {
-    "dad-jokes-cli": "./cli.js"
+    "dad-jokes-cli": "./index.js"
   },
   "scripts": {
     "start": "node index.js"
