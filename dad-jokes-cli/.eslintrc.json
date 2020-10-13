@@ -9,5 +9,8 @@
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"]
+  },
+  "parserOptions": {
+    "ecmaVersion": 8
   }
 }
