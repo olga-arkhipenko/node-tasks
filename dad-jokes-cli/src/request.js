@@ -37,6 +37,4 @@ const get = url => new Promise((resolve, reject) => {
   });
 });
 
-module.exports = {
-  get
-};
+module.exports = { get };

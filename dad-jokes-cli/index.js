@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-const { searchJoke, showLeaderboard } = require('./services');
+const { searchJoke } = require('./src/search');
+const { showLeaderboard } = require('./src/leaderboard');
 
 const SEARCH_MODE = '--searchTerm';
 const LEADERBOARD_MODE = '--leaderboard';

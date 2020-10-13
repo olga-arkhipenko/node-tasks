@@ -1,6 +1,6 @@
-const getRandomInRange = (min, max) =>
+const randomInRange = (min, max) =>
   Math.floor(Math.random() * (max - min + 1) + min);
 
 module.exports = {
-  getRandomInRange
+  randomInRange
 };
