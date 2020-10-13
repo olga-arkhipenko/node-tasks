@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Simple Dad Jokes API CLI",
   "main": "index.js",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
+  },
+  "engineStrict" : true,
   "bin": {
     "dad-jokes-cli": "./index.js"
   },
