@@ -1,8 +1,10 @@
 const { get } = require('./request');
-const { randomInRange } = require('./utils');
 
 const SEARCH_URL = 'https://icanhazdadjoke.com/search';
 const PAGE_LIMIT = 30;
+
+const randomInRange = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
 
 const searchJoke = async term => {
   const query = new URLSearchParams({ term, limit: PAGE_LIMIT }).toString();
