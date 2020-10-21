@@ -17,6 +17,6 @@ npm unlink               # Delete the symlink
 ## Use
 
 ```bash
-dad-jokes-cli --search <term>  # Find a random joke by a search term
+dad-jokes-cli --searchTerm <term>  # Find a random joke by a search term
 dad-jokes-cli --leaderboard    # Show the most popular joke among the found ones
 ```
