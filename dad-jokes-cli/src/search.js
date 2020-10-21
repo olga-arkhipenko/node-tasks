@@ -1,5 +1,5 @@
 const { get } = require('./request');
-const { updateFile } = require('./file');
+const { updateJokes } = require('./file');
 
 const SEARCH_URL = 'https://icanhazdadjoke.com/search';
 const PAGE_LIMIT = 30;
@@ -34,7 +34,7 @@ const searchJoke = async term => {
     }
 
     console.log(randomJoke.joke);
-    updateFile(randomJoke);
+    updateJokes(randomJoke);
 
   } catch (e) {
     console.error(e);
