@@ -14,9 +14,9 @@ const updateFile = ({ id, joke }) => {
     fs.mkdirSync(FILE_DIR, { recursive: true });
   } else {
     const fileData = fs.readFileSync(FILE_PATH, { encoding: ENCODING}).trim();
-    const validJson = fileData && JSON.parse(fileData) && JSON.parse(fileData);
-    if (!validJson || validJson.constructor !== Object) throw new Error('Invalid jokes.json');
-    jokes = JSON.parse(validJson);
+    const parsedJson = fileData && JSON.parse(fileData);
+    if (!parsedJson || parsedJson.constructor !== Object) throw new Error('Invalid jokes.json');
+    jokes = parsedJson;
   }
 
   if(jokes[id]) {
