@@ -1,15 +1,14 @@
-const { readJokes } = require('./file');
+const { readJokes } = require('./jokeStorage');
 
-const showLeaderboard = () => {
+const getTopJoke = () => {
   const jokes = readJokes();
-  const sortedJokes = Object.entries(jokes).sort((jokeFirst, jokeSecond) => jokeSecond[1].counter - jokeFirst[1].counter);
+  const sortedJokes = Object.entries(jokes).sort((jokeFirst, jokeSecond) => jokeSecond[1].rating - jokeFirst[1].rating);
 
   if(!sortedJokes.length) {
-    console.log('There are no jokes yet');
-    return;
+    return null;
   }
 
-  console.log(sortedJokes[0][1].joke);
+  return sortedJokes[0][1].joke;
 };
 
-module.exports = { showLeaderboard };
+module.exports = { getTopJoke };

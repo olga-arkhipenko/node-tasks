@@ -1,5 +1,4 @@
 const { get } = require('./request');
-const { updateJokes } = require('./file');
 
 const SEARCH_URL = 'https://icanhazdadjoke.com/search';
 const PAGE_LIMIT = 30;
@@ -17,8 +16,7 @@ const searchJoke = async term => {
     } = await get(`${SEARCH_URL}?${query}`);
 
     if(!totalJokesAmount) {
-      console.log('No jokes were found for that search term');
-      return;
+      return null;
     }
 
     const randomJokeNumber = randomInRange(1, totalJokesAmount);
@@ -33,8 +31,7 @@ const searchJoke = async term => {
       randomJoke = results[0];
     }
 
-    console.log(randomJoke.joke);
-    updateJokes(randomJoke);
+    return randomJoke;
 
   } catch (e) {
     console.error(e);
